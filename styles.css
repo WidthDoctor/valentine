@@ -289,19 +289,186 @@ body {
 }
 
 /* Адаптивность */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card {
-    width: 100%;
-    max-width: 350px;
-    height: 450px;
+    width: 90vw;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 400 / 500;
+    min-width: 350px;
   }
 
-  .main-title {
-    font-size: 32px;
+  .language-selector {
+    top: 15px;
+    right: 15px;
+    gap: 8px;
+  }
+
+  .lang-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+    max-width: 320px;
+    height: 420px;
   }
 
   .card-front,
   .card-back {
-    padding: 30px;
+    padding: 25px;
+  }
+
+  .hearts-bg {
+    padding: 15px;
+  }
+
+  .heart {
+    font-size: 35px;
+  }
+
+  .main-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .card-back h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .message-text {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+
+  .card-footer {
+    margin-top: 15px;
+    font-size: 25px;
+  }
+
+  .language-selector {
+    top: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  .lang-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 95%;
+    max-width: 280px;
+    height: 380px;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 20px;
+  }
+
+  .hearts-bg {
+    padding: 10px;
+  }
+
+  .heart {
+    font-size: 30px;
+  }
+
+  .main-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .card-back h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .message-text {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .heart-small {
+    font-size: 30px;
+  }
+
+  .card-footer {
+    margin-top: 12px;
+  }
+
+  .language-selector {
+    top: 10px;
+    right: 10px;
+    gap: 5px;
+  }
+
+  .lang-btn {
+    padding: 4px 10px;
+    font-size: 11px;
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    width: 98%;
+    max-width: 260px;
+    height: 350px;
+  }
+
+  .card-front,
+  .card-back {
+    padding: 15px;
+  }
+
+  .heart {
+    font-size: 25px;
+  }
+
+  .main-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .card-back h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .message-text {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .heart-small {
+    font-size: 25px;
   }
 }

@@ -1,7 +1,28 @@
+// Переводы
+const translations = {
+  en: {
+    title: "Happy Valentine's<br>Day! 💕",
+    subtitle: "Click the card ✨",
+    header: "You're absolutely beautiful! 💌",
+    message:
+      "You shine brighter than any star,<br>your kindness knows no bounds,<br>and your beauty is truly unmatchable! 💖<br><br>Thank you for being such an amazing girl! ✨",
+  },
+  ru: {
+    title: "С Днём<br>Святого Валентина! 💕",
+    subtitle: "Нажми на открытку ✨",
+    header: "Ты просто королева! 💌",
+    message:
+      "Ты светишь ярче звёзд,<br>твоя доброта безгранична,<br>и твоя красота неоспорима! 💖<br><br>Спасибо, что ты такая чудесная! ✨",
+  },
+};
+
+let currentLanguage = "en";
+
 // Инициализация
 document.addEventListener("DOMContentLoaded", () => {
   const card = document.querySelector(".card");
   const canvas = document.getElementById("floatingHearts");
+  const langButtons = document.querySelectorAll(".lang-btn");
 
   // Обработчик клика на открытку для переворота
   card.addEventListener("click", () => {
@@ -11,9 +32,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Обработчик клика на кнопки языка
+  langButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const lang = btn.dataset.lang;
+      changeLanguage(lang);
+
+      // Обновляем активную кнопку
+      langButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
+
   // Инициализация парящих сердечек
   initFloatingHearts(canvas);
 });
+
+// Функция смены языка
+function changeLanguage(lang) {
+  currentLanguage = lang;
+  const trans = translations[lang];
+
+  // Обновляем заголовок
+  const titleEl = document.querySelector(".main-title");
+  titleEl.innerHTML = trans.title;
+
+  // Обновляем подзаголовок
+  const subtitleEl = document.querySelector(".subtitle");
+  subtitleEl.textContent = trans.subtitle;
+
+  // Обновляем заголовок на обороте
+  const headerEl = document.querySelector(".card-back h2");
+  headerEl.textContent = trans.header;
+
+  // Обновляем сообщение
+  const messageEl = document.querySelector(".message-text");
+  messageEl.innerHTML = trans.message;
+}
 
 // Canvas-рисование парящих сердечек
 function initFloatingHearts(canvas) {

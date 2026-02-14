@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&family=Montserrat:wght@400;600;700&family=Lora:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -16,6 +16,12 @@
 
 <body>
     <div class="stars"></div>
+
+    <!-- Кнопки выбора языка -->
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">РУ</button>
+    </div>
 
     <div class="card-container">
         <div class="card">
@@ -29,21 +35,20 @@
                         <span class="heart">💕</span>
                         <span class="heart">💕</span>
                     </div>
-                    <h1 class="main-title">Happy Valentine's<br>Day! 💕</h1>
-                    <p class="subtitle">Click the card ✨</p>
+                    <h1 class="main-title" data-en="Happy Valentine's&lt;br&gt;Day! 💕"
+                        data-ru="С Днём&lt;br&gt;Святого Валентина! 💕">Happy Valentine's<br>Day! 💕</h1>
+                    <p class="subtitle" data-en="Click the card ✨" data-ru="Нажми на открытку ✨">Click the card ✨</p>
                 </div>
 
                 <!-- Back of card -->
                 <div class="card-back">
-                    <h2>Thank you for being here! 💌</h2>
-                    <p id="messageParagraph" class="message-text">
-                        On this day of love, I wish you:
-                        <br><br>
-                        a kind heart,<br>
-                        a radiant smile,<br>
-                        and love in all that you do! 💖
-                        <br><br>
-                        Thank you for being so amazing! ✨
+                    <h2 data-en="You're absolutely beautiful! 💌" data-ru="Ты просто королева! 💌">You're absolutely
+                        beautiful! 💌</h2>
+                    <p class="message-text"
+                        data-en="You shine brighter than any star,&lt;br&gt;your kindness knows no bounds,&lt;br&gt;and your beauty is truly unmatchable! 💖&lt;br&gt;&lt;br&gt;Thank you for being such an amazing girl! ✨"
+                        data-ru="Ты светишь ярче звёзд,&lt;br&gt;твоя доброта безгранична,&lt;br&gt;и твоя красота неоспорима! 💖&lt;br&gt;&lt;br&gt;Спасибо, что ты такая чудесная! ✨">
+                        You shine brighter than any star,<br>your kindness knows no bounds,<br>and your beauty is truly
+                        unmatchable! 💖<br><br>Thank you for being such an amazing girl! ✨
                     </p>
                     <div class="card-footer">
                         <span class="heart-small">💝</span>
